@@ -31,13 +31,11 @@ let menuItems = [
   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 */
 
-// const menu = document.querySelector('.menu');
-
+//Write a component called 'menuMaker' to create a menu like the markup
 function menuMaker(mItems) {
 
 //Inside the function, iterate over the array creating a list item <li> element for each item in the array.
 //Add those items to the <ul>
-
 const divMenu = document.createElement('div');
 const mList = document.createElement('ul');
 
@@ -52,7 +50,7 @@ mItems.forEach(aItems => {
 });
 
 //Still inside your function, select from the DOM the menu button (the element with a class of 'menu-button').
-const menuBtn = document.querySelector('menu-button');
+const menuBtn = document.querySelector('.menu-button');
 
 // Add a click event listener to the menu button. When clicked it should toggle the class 'menu--open' on div.menu (your div with a 'menu' class).
 divMenu.classList.add('menu--open');
@@ -68,5 +66,3 @@ menuBtn.addEventListener('click', () => {
 const mHeader = document.querySelector('.header');
 const fMenu = menuMaker(menuItems);
 mHeader.appendChild(fMenu);
-
-

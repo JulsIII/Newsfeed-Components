@@ -195,16 +195,3 @@ data.forEach((articleElemnt) => {
   const article = articleMaker(articleElemnt)
   articlesRead.appendChild(article)
 });
-
-//   return articleMaker(data);
-// });
-
-// articlesRead.forEach((articlesElement) => {
-//   articles.appendChild(articlesElement);
-// });
-
-// const articleHTML = document.querySelector('.articles') // grab div.article from the HTML
-// data.forEach((articleElemnt) => {
-//   const article = articleMaker(articleElemnt)
-//   articleHTML.appendChild(article)
-// })
