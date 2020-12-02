@@ -142,21 +142,25 @@ const data = [
   Refresh the page to see the new article.
 */
 
-const articles = document.querySelector('.articles');
+//const articles = document.querySelector('.articles');
 
-function articleMaker({data}) {
+function articleMaker(articleObj) {
 
 //Instantiate all the elements needed for an articleMaker
 const articlePanel = document.createElement('div');
 const articleTitle = document.createElement('h2');
-const articleDate = document.createElement('p', '.date');
-const articlePara = document.createElement('p');  ///how to do 3x????
-const articleSpan = document.createElement('.expandButton');
+const articleDate = document.createElement('p');
+const articlePara1 = document.createElement('p');  ///how to do 3x????
+const articlePara2 = document.createElement('p');
+const articlePara3 = document.createElement('p');
+const articleSpan = document.createElement('span');
 
 //Setup the structure of our elements
 articlePanel.appendChild(articleTitle);
 articlePanel.appendChild(articleDate);
-articlePanel.appendChild(articlePara);
+articlePanel.appendChild(articlePara1);
+articlePanel.appendChild(articlePara2);
+articlePanel.appendChild(articlePara3);
 articlePanel.appendChild(articleSpan);
 
 // Add proper class names to our elements 
@@ -165,11 +169,17 @@ articleDate.classList.add('date');
 articleSpan.classList.add('expandButton');
 
 // Set text content using arguments as raw material
-articlePanel.textContent = articleObj;
+
+articleTitle.textContent = articleObj.title;
+articleDate.textContent = articleObj.date;
+articleSpan.textContent = '+';
+articlePara1.textContent = articleObj.firstParagraph;
+articlePara2.textContent = articleObj.secondParagraph;
+articlePara3.textContent = articleObj.thirdParagraph;
 
 // Still inside `articleMaker`, add an event listener to the span.expandButton.
 // This listener should toggle the class 'article-open' on div.article.
-articleSpan.addEventListener('click', (event) => {
+articleSpan.addEventListener('click', () => {
     articlePanel.classList.toggle('article-open');
   });
 
@@ -179,10 +189,22 @@ articleSpan.addEventListener('click', (event) => {
 
 //Outside your function now, loop over the data. At each iteration you'll use your component
 //to create a div.article element and append it to the DOM inside div.articles (see index.html).
-const articlesRead = data.map((data) => {
-  return articleMaker(data);
+const articlesRead = document.querySelector('.articles')
+data.forEach((articleElemnt) => {
+  
+  const article = articleMaker(articleElemnt)
+  articlesRead.appendChild(article)
 });
 
-articlesRead.forEach((articlesElement) => {
-  articles.appendChild(articlesElement);
-});
+//   return articleMaker(data);
+// });
+
+// articlesRead.forEach((articlesElement) => {
+//   articles.appendChild(articlesElement);
+// });
+
+// const articleHTML = document.querySelector('.articles') // grab div.article from the HTML
+// data.forEach((articleElemnt) => {
+//   const article = articleMaker(articleElemnt)
+//   articleHTML.appendChild(article)
+// })
