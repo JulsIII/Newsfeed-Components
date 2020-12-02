@@ -13,38 +13,37 @@ In this project we are going to be building a news feed reader. The goal is to h
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Create a forked copy of this project.
-* [ ] Add your team lead as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [*] Create a forked copy of this project.
+* [*] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [*] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [*] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [*] Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+* [*] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
 
 ### Launching the project
 
-* [ ] Navigate to the root of the project with your command line.
-* [ ] Run `npm install` to download any dependencies listed in the `package.json` file.
-* [ ] Run `npm start` to compile your project and launch a development server.
-* [ ] Navigate Chrome to the URL indicated in the output of the `npm start` command.
+* [*] Navigate to the root of the project with your command line.
+* [*] Run `npm install` to download any dependencies listed in the `package.json` file.
+* [*] Run `npm start` to compile your project and launch a development server.
+* [*] Navigate Chrome to the URL indicated in the output of the `npm start` command.
 
 ### Part 1: The Articles Component
 
 * Follow the instructions found in the Articles.js file to complete the JavaScript functionality and add the components to the DOM.
-
+DONE
 ### Part 2: Add Articles
 
 * Now that we have our components built, add a few articles of your own to the data array. Notice how our JavaScript code automatically creates the new articles. Write the code once and add as many components as you want all while maintaining the functionality we built!
-
+DONE
 ### Part 3: The Menu
 
 * Follow the instructions found in the Menu.js file to complete the JavaScript functionality.
 
 ### Stretch Goals
-
+DONE
 If you complete the main goals of the page let's play around with some cool animation libraries.
 
 A few things to check out:

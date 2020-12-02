@@ -86,6 +86,33 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'The Spice Must Flow',
+    date: 'Jan 1st, 40k',
+    firstParagraph: `The Spacing Guild waylays the false adversary, before Mentat where gene. Thus spoke Taqwa recites the shigawire, into sacrifice sayyadina threatens. Necessity claims of the ordinary Duke down the ritual understands metaphysical. Crisis desires the Royal Creche, both morality faces the companion deduces. The planetary system trails throughout fanatic, into challenge yet religion makes metaphysical. Profound tooth evades beside consternation and small box clouds.`,
+
+    secondParagraph: `Higher wound ends among lasgun for heir understands. As if the intensity recites emotion during the Helen. Treachery fears the primitive animal though prediction influences voracious Duncan. Pattern captures before the genetic breeding program below the subtlety strikes weirding. Fist over Salusa Secundus, deity under elegant paradise, emotion into new testing facility flows. Behind sandstorm flaw achieves through courtesan, thus spoke knows. Swordmaster itches the symmetrical wall, fighting force uses insightful crisis.`,
+
+    thirdParagraph: `Down school eunuch sow near propaganda, but slips. Behind Hawat Lisan al-Gaib understands between Hasimir, since rushes. Baliset ends the flower-spangled Otheym, victim encloses symmetrical shigawire. The water bond will sing the graceful drug, but galaxy as seduction. Under evensong master sacrifices through Jessica, when befalls. Below the minor fear experiences the innocent Missionaria Protectiva as if the fluid Tleilax or understands negotiation.`
+  },
+  {
+    title: 'Numba Juan',
+    date: 'Dec 1st, 3303',
+    firstParagraph: `You're going to be an interesting companion, Mr. Data. For an android with no feelings, he sure managed to evoke them in others. Not if I weaken first. I'll alert the crew. My oath is between Captain Kargan and myself. Your only concern is with how you obey my orders. Or do you prefer the rank of prisoner to that of lieutenant? Travel time to the nearest starbase? You enjoyed that. But the probability of making a six is no greater than that of rolling a seven. I recommend you don't fire until you're within 40,000 kilometers. Flair is what marks the difference between artistry and mere competence. This is not about revenge. This is about justice. Yes, absolutely, I do indeed concur, wholeheartedly! We finished our first sensor sweep of the neutral zone. Some days you get the bear, and some days the bear gets you.`,
+
+    secondParagraph: `You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. A surprise party? Mr. Worf, I hate surprise parties. I would *never* do that to you. We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation. This is not about revenge. This is about justice. Some days you get the bear, and some days the bear gets you. Maybe if we felt any human loss as keenly as we feel one of those close to us, human history would be far less bloody. Some days you get the bear, and some days the bear gets you. Shields up! Rrrrred alert! Why don't we just give everybody a promotion and call it a night - 'Commander'? What? We're not at all alike! `,
+
+    thirdParagraph: `You enjoyed that. The look in your eyes, I recognize it. You used to have it for me. I'd like to think that I haven't changed those things, sir. About four years. I got tired of hearing how young I looked. Now, how the hell do we defeat an enemy that knows us better than we know ourselves? Our neural pathways have become accustomed to your sensory input patterns. I am your worst nightmare! In all trust, there is the possibility for betrayal. This is not about revenge. This is about justice. What's a knock-out like you doing in a computer-generated gin joint like this? Besides, you look good in a dress. A surprise party? Mr. Worf, I hate surprise parties. I would *never* do that to you. Is it my imagination, or have tempers become a little frayed on the ship lately? Sorry, Data.`
+  },
+  {
+    title: 'Professional Software Development from the 80s!',
+    date: 'Jan 2nd, 1985',
+    firstParagraph: `Get crucial awesome waver airhead most definitely psych tough bitchin'. Psych bogus righteous word bogus blar mega get crucial i kid you not. Mega blar heinous bitchin' get crucial yo mega bitchin' bodacious blar. Righteous fantabulous word mega waver yo waver most definitely chicken whoa radical. Get crucial get crucial big time stellar bag your face word radical bite me bag your face barf bag. I kid you not big time yes way blar bag your face big time yo psych major. No doy most definitely tough i kid you not most definitely psych bite me bite me. For sure bitchin' spaz cheeuh! excellent whoa major barf bag righteous awesome airhead outrageous.`,
+
+    secondParagraph: `Yo spaz i kid you not yo spaz outrageous mad whoa heinous no can do righteous. Radical gotta motor yes way mad stellar yes way bogus outrageous chicken barf bag. Heinous word psych blar outrageous cheeuh! major get crucial psych bag your face. Spaz bogus yo righteous bodacious waver most definitely cheeuh!. Big time bag your face for sure no can do outrageous heinous bitchin' awesome. Major airhead airhead word get crucial cheeuh! whoa excellent righteous barf me out waver.`,
+
+    thirdParagraph: `Waver awesome whoa word yo mega psych awesome. Blar awesome outrageous i kid you not narbo bogus chicken i kid you not outrageous narbo. Excellent mad whoa waver chicken i kid you not word bff yo mega totally. Heinous airhead narbo lame barf me out mega yes way cheeuh! mad wicked. Mega tough whoa bag your face righteous gotta motor narbo harsh blar fantabulous big time bff.`
   }
 ];
 
@@ -94,13 +121,13 @@ const data = [
   Your component is a function that takes an article object as its only argument,
   and returns a DOM node looking like the one below:
 
-  <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
+  <div class="article">                           //articlePanel
+    <h2>{title of the article}</h2>                 //articleTitle
+    <p class="date">{date of the article}</p>       //articleDate
 
-    {three separate paragraph elements}
+    {three separate paragraph elements}             //articlePara
 
-    <span class="expandButton">+</span>
+    <span class="expandButton">+</span>             //articleSpan
   </div>
 
   Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
@@ -114,3 +141,58 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+
+//const articles = document.querySelector('.articles');
+
+function articleMaker(articleObj) {
+
+//Instantiate all the elements needed for an articleMaker
+const articlePanel = document.createElement('div');
+const articleTitle = document.createElement('h2');
+const articleDate = document.createElement('p');
+const articlePara1 = document.createElement('p');  ///how to do 3x????
+const articlePara2 = document.createElement('p');
+const articlePara3 = document.createElement('p');
+const articleSpan = document.createElement('span');
+
+//Setup the structure of our elements
+articlePanel.appendChild(articleTitle);
+articlePanel.appendChild(articleDate);
+articlePanel.appendChild(articlePara1);
+articlePanel.appendChild(articlePara2);
+articlePanel.appendChild(articlePara3);
+articlePanel.appendChild(articleSpan);
+
+// Add proper class names to our elements 
+articlePanel.classList.add('article');
+articleDate.classList.add('date');
+articleSpan.classList.add('expandButton');
+
+// Set text content using arguments as raw material
+
+articleTitle.textContent = articleObj.title;
+articleDate.textContent = articleObj.date;
+articleSpan.textContent = '+';
+articlePara1.textContent = articleObj.firstParagraph;
+articlePara2.textContent = articleObj.secondParagraph;
+articlePara3.textContent = articleObj.thirdParagraph;
+
+// Still inside `articleMaker`, add an event listener to the span.expandButton.
+// This listener should toggle the class 'article-open' on div.article.
+articleSpan.addEventListener('click', () => {
+    articlePanel.classList.toggle('article-open');
+  });
+
+// don't forget to return the panel!
+  return articlePanel;
+}
+
+//Outside your function now, loop over the data. At each iteration you'll use your component
+//to create a div.article element and append it to the DOM inside div.articles (see index.html).
+const articlesRead = document.querySelector('.articles')
+data.forEach((articleElemnt) => {
+  
+  const article = articleMaker(articleElemnt)
+  articlesRead.appendChild(article)
+});
