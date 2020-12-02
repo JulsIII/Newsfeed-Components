@@ -94,13 +94,13 @@ const data = [
   Your component is a function that takes an article object as its only argument,
   and returns a DOM node looking like the one below:
 
-  <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
+  <div class="article">                           //amaker
+    <h2>{title of the article}</h2>                 //articleTitle
+    <p class="date">{date of the article}</p>       //articleDate
 
-    {three separate paragraph elements}
+    {three separate paragraph elements}             //articlePara
 
-    <span class="expandButton">+</span>
+    <span class="expandButton">+</span>             //articleSpan
   </div>
 
   Step 2: Still inside `articleMaker`, add an event listener to the span.expandButton.
@@ -114,3 +114,51 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+
+// function articleMaker({articleObj}) {
+
+// //Instantiate all the elements needed for an articleMaker
+// const aMaker = document.createElement('div');
+// const articleTitle = document.createElement('h2');
+// const articleDate = document.createElement('p', '.date');
+// const articlePara = document.createElement('p');  ///how to do 3x????
+// const articleSpan = document.createElement('.expandButton');
+
+// //Setup the structure of our elements
+// aMaker.appendChild(articleTitle);
+// aMaker.appendChild(articleDate);
+// aMaker.appendChild(articlePara);
+// aMaker.appendChild(articleSpan);
+
+//   // Add proper class names to our elements (See index.html for reference)
+//   // paying attention to the elements that need to start out hidden
+// panel.classList.add('panel');
+// panelBar.classList.add('panel-bar');
+// panelButtons.classList.add('panel-buttons');
+// panelContent.classList.add('panel-content');
+// openButton.classList.add('panel-btn-open');
+// closeButton.classList.add('panel-btn-close', 'hide-btn');
+
+// // TASK 8- Set text content using arguments as raw material
+// //  and also using the open and close arrows imported at the top of the file
+
+// panelTitle.textContent = title;
+// panelContent.textContent = content;
+// openButton.textContent = arrows.open;
+// closeButton.textContent = arrows.close;
+
+//   // TASK 9- When the 'open' or 'close' buttons are clicked, the content is toggled on/off:
+//   //  - the open button needs to go away (the 'hide-btn' class name controls this)
+//   //  - the close button needs to show (the 'hide-btn' class name controls this)
+//   //  - the contents need to show (the 'toggle-on' class name controls this)
+
+//   panelButtons.addEventListener('click', (event) => {
+//     openButton.classList.toggle('hide-btn');
+//     closeButton.classList.toggle('hide-btn');
+//     panelContent.classList.toggle('toggle-on');
+//   });
+
+//   // don't forget to return the panel!
+//   return panel;
+// }
